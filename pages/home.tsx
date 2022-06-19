@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import BottomNav from "@components/BottomNav";
+import UsedCard from "@components/UsedCard";
 
 const Index: NextPage = () => {
   return (
@@ -7,7 +8,7 @@ const Index: NextPage = () => {
       <title>My Pocket</title>
 
       <div className="p-4 bg-gray-50 h-screen">
-        <div className="flex flex-col gap-4">
+        <div className="flex justify-center gap-4 ">
           <div>
             <h4 className="text-xl">ใช้ไปแล้ว</h4>
             <h2 className="text-5xl font-medium">
@@ -21,6 +22,7 @@ const Index: NextPage = () => {
             </h2>
           </div>
         </div>
+       
       </div>
       <BottomNav />
     </>
