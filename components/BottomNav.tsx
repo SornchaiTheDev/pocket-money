@@ -1,4 +1,4 @@
-import { AiOutlineHome, AiOutlineUnorderedList , AiOutlineSetting } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineHistory , AiOutlineSetting } from "react-icons/ai";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -25,8 +25,8 @@ function BottomNav() {
         ${isList && "bg-gray-200"}
         `}
         >
-          <AiOutlineUnorderedList size="1.5rem" />
-          <p>รายการ</p>
+          <AiOutlineHistory size="1.5rem" />
+          <p>ประวัติย้อนหลัง</p>
         </div>
       </Link>
       <Link passHref href="/settings">

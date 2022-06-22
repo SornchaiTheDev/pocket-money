@@ -4,7 +4,11 @@ import ItemList from "@components/ItemList";
 import { v4 as uuid } from "uuid";
 import { ItemsI } from "types/Items";
 
-function AddList() {
+interface AddListProps {
+  type: "income" | "outcome";
+}
+
+function AddList({ type }: AddListProps) {
   const [item, setItem] = useState<ItemsI>({ title: "", price: 0 });
   const [items, setItems] = useState<ItemsI[]>([]);
 
