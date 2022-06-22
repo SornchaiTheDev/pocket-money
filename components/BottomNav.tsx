@@ -8,7 +8,7 @@ function BottomNav() {
   const isList = pathname === "/list";
   const isSettings = pathname === "/settings";
   return (
-    <div className="fixed bottom-0 bg-white w-full flex justify-around items-center p-3">
+    <div className="fixed bottom-0 bg-white w-full flex justify-around items-center p-3 select-none">
       <Link passHref href="/home">
         <div
           className={`inline-flex flex-col items-center gap-1 w-full p-2 rounded-lg

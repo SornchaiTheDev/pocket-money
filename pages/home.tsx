@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import BottomNav from "@components/BottomNav";
-import UsedCard from "@components/UsedCard";
+import AddList from "@components/AddList";
 
 const Index: NextPage = () => {
   return (
@@ -8,21 +8,30 @@ const Index: NextPage = () => {
       <title>My Pocket</title>
 
       <div className="p-4 bg-gray-50 h-screen">
-        <div className="flex justify-center gap-4 ">
-          <div>
-            <h4 className="text-xl">ใช้ไปแล้ว</h4>
-            <h2 className="text-5xl font-medium">
-              5,000<span className="text-2xl ml-2">บาท</span>
-            </h2>
+        <div className="w-full bg-white rounded-lg shadow-lg p-4">
+          <h2 className="text-lg">
+            วันนี้ <span className="font-bold">(20 มิ.ย)</span>
+          </h2>
+
+          <div className="flex gap-2 mt-4">
+            <button className="border-green-500 hover:bg-green-500 hover:text-white text-green-500 border-2 px-4 py-2 rounded-lg">
+              เพิ่มรายรับ
+            </button>
+            <button className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white border-2 px-4 py-2 rounded-lg">
+              เพิ่มรายจ่าย
+            </button>
           </div>
-          <div>
-            <h4 className="text-xl">เงินคงเหลือเดือนนี้</h4>
-            <h2 className="text-5xl font-medium">
-              5,000<span className="text-2xl ml-2">บาท</span>
-            </h2>
-          </div>
+
+          <AddList />
         </div>
-       
+        <div className="mt-4 w-full bg-white rounded-lg shadow-lg p-4">
+          <h2 className="text-lg mb-2">รายการวันนี้ (0)</h2>
+          <hr />
+          <div className="flex flex-col justify-center items-center w-full h-full">
+            <h2>ไม่มีรายการ</h2>
+          </div>
+          <div className="flex flex-col"></div>
+        </div>
       </div>
       <BottomNav />
     </>
