@@ -8,7 +8,7 @@ const Index: NextPage = () => {
     <>
       <title>My Pocket</title>
       <div className="bg-gray-50 min-h-screen flex flex-col items-center gap-4">
-        <div className="w-full flex justify-between items-center bg-white p-4">
+        <div className="w-full flex justify-between items-center bg-white p-4 shadow-sm">
           <BsChevronLeft size="1.25rem" className="flex-1 cursor-pointer" />
           <h2>
             {months[new Date().getMonth()].full} {new Date().getFullYear()}

@@ -1,8 +1,11 @@
 import { NextPage } from "next";
 import BottomNav from "@components/BottomNav";
 import AddList from "@components/AddList";
+import { months } from "@assets/months";
 
 const Index: NextPage = () => {
+  const day = new Date().getDate();
+  const month = new Date().getMonth();
   return (
     <>
       <title>My Pocket</title>
@@ -10,7 +13,10 @@ const Index: NextPage = () => {
       <div className="p-4 bg-gray-50 h-screen">
         <div className="w-full bg-white rounded-lg shadow-lg p-4">
           <h2 className="text-lg">
-            วันนี้ <span className="font-bold">(20 มิ.ย)</span>
+            วันนี้{" "}
+            <span className="font-bold">
+              ({day.toString().padStart(2, "0")} {months[month].short})
+            </span>
           </h2>
 
           <div className="flex gap-2 mt-4">

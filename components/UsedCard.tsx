@@ -38,6 +38,7 @@ function UsedCard({ day, month }: UsedCardProps) {
             <span className="text-green-600 font-bold">+250</span> บาท
           </h3>
         </div>
+        <hr />
         <div className="flex justify-between">
           <h3>ซื้อของTops</h3>
           <h3>
