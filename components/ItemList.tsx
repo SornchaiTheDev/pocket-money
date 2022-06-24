@@ -4,11 +4,10 @@ import { BiTrash } from "react-icons/bi";
 
 interface ItemListProps {
   onChange: (value: ItemsI) => void;
-  onBlur: () => void;
   deleteItem: () => void;
 }
 
-const ItemList = ({ onBlur, onChange, deleteItem }: ItemListProps) => {
+const ItemList = ({ onChange, deleteItem }: ItemListProps) => {
   const [item, setItem] = useState<ItemsI>({ title: "", price: "" });
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +20,6 @@ const ItemList = ({ onBlur, onChange, deleteItem }: ItemListProps) => {
       <span className="ml-4">•</span>
       <input
         name="title"
-        onBlur={onBlur}
         value={item.title}
         onChange={handleOnChange}
         type="text"

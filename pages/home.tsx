@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { NextPage } from "next";
+import MoneyStatus from "@components/MoneyStatus";
 import BottomNav from "@components/BottomNav";
 import AddList from "@components/AddList";
 import { months } from "@assets/months";
-import { useState } from "react";
 
 const Index: NextPage = () => {
   const day = new Date().getDate();
@@ -13,6 +14,7 @@ const Index: NextPage = () => {
       <title>My Pocket</title>
 
       <div className="p-4 bg-gray-50 min-h-screen">
+        <MoneyStatus />
         <div className="w-full bg-white rounded-lg shadow-lg p-4">
           <h2 className="text-lg">
             วันนี้{" "}
@@ -38,7 +40,9 @@ const Index: NextPage = () => {
             </button>
           </div>
 
-          {type !== "none" && <AddList type={type} />}
+          {type !== "none" && (
+            <AddList type={type} onCancel={() => setType("none")} />
+          )}
         </div>
         <div className="mt-4 w-full bg-white rounded-lg shadow-lg p-4 mb-32 ">
           <h2 className="text-lg mb-2">รายการวันนี้ (0)</h2>

@@ -6,9 +6,10 @@ import { ItemsI } from "types/Items";
 
 interface AddListProps {
   type: "income" | "outcome";
+  onCancel: () => void;
 }
 
-function AddList({ type }: AddListProps) {
+function AddList({ type, onCancel }: AddListProps) {
   const [item, setItem] = useState<ItemsI>({ title: "", price: 0 });
   const [items, setItems] = useState<ItemsI[]>([]);
 
@@ -67,7 +68,6 @@ function AddList({ type }: AddListProps) {
           deleteItem={() => handleDeleteItem(uid!)}
           key={uid}
           onChange={(value) => handleOnChangeItem(value, uid!)}
-          onBlur={() => onItemBlur(uid!, i)}
         />
       ))}
       <button
@@ -79,9 +79,12 @@ function AddList({ type }: AddListProps) {
       </button>
       <div className="flex justify-between items-center gap-4">
         <button className="w-full bg-green-500 text-white rounded-lg p-2 shadow-md">
-          บันทึก
+          เพิ่ม
         </button>
-        <button className="w-full bg-red-500 text-white rounded-lg p-2 shadow-md">
+        <button
+          className="w-full border-red-500 text-red-500 hover:bg-red-500 hover:text-white   rounded-lg p-2 border-2"
+          onClick={onCancel}
+        >
           ยกเลิก
         </button>
       </div>

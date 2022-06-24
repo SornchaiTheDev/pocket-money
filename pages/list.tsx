@@ -17,7 +17,7 @@ const Index: NextPage = () => {
         </div>
         <div className="flex flex-col gap-4 w-full my-10 mb-28 px-4">
           {Array.from({ length: 30 }, (_, i) => (
-            <UsedCard day={i + 1} month={5} />
+            <UsedCard key={i} day={i + 1} month={5} />
           ))}
         </div>
       </div>
