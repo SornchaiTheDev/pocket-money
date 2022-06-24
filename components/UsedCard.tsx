@@ -10,7 +10,7 @@ function UsedCard({ day, month }: UsedCardProps) {
   const handleOnClick = () => setIsOpen(!isOpen);
   return (
     <div
-      className="w-full bg-white shadow-lg rounded-lg flex flex-col gap-3 cursor-pointer select-none"
+      className="w-full bg-white shadow-md rounded-lg flex flex-col gap-3 cursor-pointer select-none"
       onClick={handleOnClick}
     >
       <div className="flex justify-between items-center  px-4 py-6">
