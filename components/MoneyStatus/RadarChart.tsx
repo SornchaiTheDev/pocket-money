@@ -33,7 +33,7 @@ const data = {
 
 function RadarChart() {
   return (
-    <Card className="p-4">
+    <Card className="p-4 col-span-2 md:col-span-1">
       <Radar data={data} />
     </Card>
   );

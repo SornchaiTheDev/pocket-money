@@ -5,7 +5,7 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 function Index() {
   return (
-    <Card className="p-4">
+    <Card className="p-4 col-span-2 md:col-span-1">
       <h2 className="text-lg font-normal">ประวัติย้อนหลัง</h2>
       <div className="w-full flex justify-between items-center bg-white p-4 border-b-2">
         <BsChevronLeft size="1.25rem" className="flex-1 cursor-pointer" />

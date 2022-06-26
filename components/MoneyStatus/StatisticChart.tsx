@@ -54,7 +54,7 @@ ChartJS.register(
 
 function StatisticChart() {
   return (
-    <Card className="p-4">
+    <Card className="p-4 col-span-2 md:col-span-1">
       <Line data={data} options={options} className="my-4" />
     </Card>
   );

@@ -2,7 +2,7 @@ import Card from "@components/Card";
 
 function TextStatus() {
   return (
-    <Card className="p-4">
+    <Card className="p-4 col-span-2">
       <div className="flex justify-between flex-wrap gap-4 ">
         <div className="">
           <h2 className="font-semibold">วันนี้ใช้ไป</h2>
