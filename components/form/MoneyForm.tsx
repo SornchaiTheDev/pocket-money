@@ -18,7 +18,7 @@ function MoneyForm({ placeholder }: MoneyFormProps) {
         <input
           type="text"
           style={{ border: "1.5px solid #2e2e2e" }}
-          className="border-2 rounded-lg p-2 pb-3 pt-4 text-lg w-full"
+          className="border-2 rounded-lg p-2 pb-2 pt-4 text-lg w-full"
           value={value}
           inputMode="numeric"
           onChange={handleOnChange}
