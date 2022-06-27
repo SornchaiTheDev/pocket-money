@@ -4,7 +4,13 @@ import ViewAs from "./ViewAs";
 
 function Header() {
   return (
-    <div className="bg-green-500 w-full px-4 md:px-10 py-10 pb-20 relative">
+    <div
+      className="w-full px-4 md:px-10 py-10 pb-20 relative"
+      style={{
+        background:
+          "linear-gradient(0deg, rgba(92,226,80,1) 0%, rgba(52,218,37,1) 100%)",
+      }}
+    >
       <div className="flex w-full justify-between items-center">
         <div>
           <h2 className="text-lg text-white">สวัสดี !</h2>

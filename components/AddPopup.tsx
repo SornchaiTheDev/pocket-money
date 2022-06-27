@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineShopping } from "react-icons/ai";
-import useClickOutSide from "@hooks/useClickOutside";
+import { FaTimes } from "react-icons/fa";
 import InputForm from "./form/InputForm";
 import MoneyForm from "./form/MoneyForm";
+import Link from "next/link";
+import CategoryList from "./Category/CategoryList";
 
 interface AddPopupProps {
   isAddNewList: boolean;
@@ -34,13 +36,26 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
         ref={divRef}
         initial={false}
         variants={variants}
-        className="w-full fixed bottom-0 bg-white rounded-t-2xl h-3/4 p-4"
+        className="w-full fixed bottom-0 bg-white rounded-t-2xl h-3/4 p-4 flex flex-col"
         animate={isAddNewList ? "open" : "closed"}
       >
-        <div className="flex flex-col gap-4 h-5/6 justify-between pt-4">
-          <div className="flex flex-col gap-6">
-            <InputForm placeholder="ชื่อรายการ" />
+        <button
+          className="inline-flex gap-2 items-center self-end my-2 cursor-pointer"
+          onClick={onClose}
+        >
+          <FaTimes />
+          <h2>ปิด</h2>
+        </button>
+        <div className="flex flex-col gap-4 justify-between pt-4">
+          <div className="flex gap-6">
+            <InputForm placeholder="ชื่อรายการ" className="w-full" />
             <MoneyForm placeholder="ราคา" />
+          </div>
+          <div className="flex flex-wrap gap-2 w-full">
+            <CategoryList category="shopping">ช้อปปิ้ง</CategoryList>
+            <CategoryList category="food">อาหาร</CategoryList>
+            <CategoryList category="travel">การเดินทาง</CategoryList>
+            <CategoryList category="entertainment">ความบันเทิง</CategoryList>
           </div>
           <button className="px-4 py-3 w-full bg-gray-900 hover:bg-gray-800 rounded-full text-white">
             เพิ่มรายการ
