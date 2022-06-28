@@ -42,23 +42,21 @@ const options: ChartOptions = {
     },
   },
 };
-function TodayUsed() {
+function Byday() {
   return (
-    <div className="absolute -bottom-10 left-0 w-full flex justify-center">
-      <div className="bg-white p-4 rounded-lg w-11/12 shadow-md relative flex justify-between items-center">
-        <div>
-          <h2 className="text-gray-400">สัปดาห์นี้ใช้ไป</h2>
-          <div className="inline-flex items-end gap-2 mt-2">
-            <h1 className="text-4xl">1,250</h1>
-            <h1 className="text-md">บาท</h1>
-          </div>
+    <>
+      <motion.div animate={{ opacity: [0, 1] }}>
+        <h2 className="text-gray-400">สัปดาห์นี้ใช้ไป</h2>
+        <div className="inline-flex items-end gap-2 mt-2">
+          <h1 className="text-4xl">1,250</h1>
+          <h1 className="text-md">บาท</h1>
         </div>
-        <div className="w-1/3">
-          <Line data={data} options={options} />
-        </div>
+      </motion.div>
+      <div className="w-1/3">
+        <Line data={data} options={options} />
       </div>
-    </div>
+    </>
   );
 }
 
-export default TodayUsed;
+export default Byday;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TodayUsed from "./TodayUsed";
+import TodayUsed from "./UsedStat";
 import ViewAs from "./ViewAs";
 
 function Header() {

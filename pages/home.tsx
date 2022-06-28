@@ -6,7 +6,6 @@ import Add from "@components/Add";
 import AddPopup from "@components/AddPopup";
 import Header from "@components/Header";
 import { useState, useEffect } from "react";
-import { toast } from "react-toastify";
 
 const Index: NextPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
