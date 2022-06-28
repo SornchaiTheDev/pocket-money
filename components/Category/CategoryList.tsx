@@ -13,7 +13,7 @@ interface CategoryListProps {
   children: ReactNode;
   category: Category;
   isSelected: boolean;
-  onClick: (c) => void;
+  onClick: () => void;
 }
 function CategoryList({
   children,

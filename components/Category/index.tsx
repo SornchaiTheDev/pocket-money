@@ -1,9 +1,10 @@
 import { useState } from "react";
 import CategoryList from "@components/Category/CategoryList";
+import { Category } from "types/Category";
 
 function index() {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const handleOnClick = (category: string) => {
+  const handleOnClick = (category: Category) => {
     setSelectedCategory(category);
   };
   return (
