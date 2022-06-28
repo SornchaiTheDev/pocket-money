@@ -58,7 +58,7 @@ function ByMonth() {
           <h1 className="text-md">บาท</h1>
         </div>
       </motion.div>
-      <div className="w-1/3">
+      <div className="w-1/3 pointer-events-none">
         <Line data={data} options={options} />
       </div>
     </div>

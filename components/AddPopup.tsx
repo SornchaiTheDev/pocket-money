@@ -38,7 +38,7 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
         ref={divRef}
         initial={false}
         variants={variants}
-        className="w-full fixed bottom-0 bg-white rounded-t-2xl p-4 flex flex-col pb-32"
+        className="w-full fixed bottom-0 bg-white rounded-t-2xl p-4 flex flex-col"
         animate={isAddNewList ? "open" : "closed"}
       >
         <button

@@ -59,7 +59,7 @@ function Byday() {
             </div>
           </div>
         </motion.div>
-        <div className="w-3/12">
+        <div className="w-3/12 pointer-events-none">
           <Doughnut data={data} options={options} />
         </div>
       </div>

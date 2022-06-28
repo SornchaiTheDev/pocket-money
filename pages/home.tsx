@@ -31,7 +31,6 @@ const Index: NextPage = () => {
           <UsedList />
           <UsedList />
         </div>
-        <BottomNav />
       </div>
 
       <AddPopup isAddNewList={isOpen} onClose={() => setIsOpen(false)} />
