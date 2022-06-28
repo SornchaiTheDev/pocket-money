@@ -7,7 +7,10 @@ interface TimeFormProps {
 
 function TimeForm({ placeholder }: TimeFormProps) {
   const now = new Date();
-  const inTimeFormat = now.getHours() + ":" + now.getMinutes();
+  const inTimeFormat =
+    now.getHours().toString().padStart(2, "0") +
+    ":" +
+    now.getMinutes().toString().padStart(2, "0");
   const [value, setValue] = useState<string>(inTimeFormat);
   const handleOnChange = (e: FormEvent<HTMLInputElement>) => {
     setValue(e.currentTarget.value);
@@ -24,7 +27,9 @@ function TimeForm({ placeholder }: TimeFormProps) {
         />
       </div>
 
-      <p className="absolute -top-3 left-2 bg-white px-2 font-normal text-sm">เวลา</p>
+      <p className="absolute -top-3 left-2 bg-white px-2 font-normal text-sm">
+        เวลา
+      </p>
     </div>
   );
 }
