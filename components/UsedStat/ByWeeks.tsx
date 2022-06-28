@@ -62,7 +62,7 @@ const options: ChartOptions = {
 };
 function ByWeeks() {
   return (
-    <>
+    <div className="flex justify-between items-center h-full">
       <motion.div animate={{ opacity: [0, 1] }}>
         <h2 className="text-gray-400">สัปดาห์นี้ใช้ไป</h2>
         <div className="inline-flex items-end gap-2 mt-2">
@@ -73,7 +73,7 @@ function ByWeeks() {
       <div className="w-1/3">
         <Line data={data} options={options} />
       </div>
-    </>
+    </div>
   );
 }
 
