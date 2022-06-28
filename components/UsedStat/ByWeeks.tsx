@@ -13,11 +13,20 @@ import {
 
 Chart.register(LinearScale, CategoryScale, PointElement, LineElement, Filler);
 
-const labels = [0, 1, 2, 3, 4, 5, 6];
+const labels = [
+  "จันทร์",
+  "อังคาร",
+  "พุธ",
+  "พฤหัสบดี",
+  "ศุกร์",
+  "เสาร์",
+  "อาทิตย์",
+];
 const data: ChartData = {
   labels,
   datasets: [
     {
+      label: "ใช้เงินไป",
       data: labels.map(() => Math.random() * 250),
       fill: "start",
       borderColor: "#f43f5e",
@@ -39,6 +48,15 @@ const options: ChartOptions = {
     },
     y: {
       display: false,
+    },
+  },
+  plugins: {
+    tooltip: {
+      callbacks: {
+        label: (ctx) => {
+          return `ใช้เงินไป : ${ctx.parsed.y.toFixed(2)} บาท`;
+        },
+      },
     },
   },
 };
