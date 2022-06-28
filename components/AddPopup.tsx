@@ -4,8 +4,9 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import InputForm from "./form/InputForm";
 import MoneyForm from "./form/MoneyForm";
-import Link from "next/link";
-import CategoryList from "./Category/CategoryList";
+import Category from "@components/Category";
+import TimeForm from "./form/TimeForm";
+import Description from "./form/Description";
 
 interface AddPopupProps {
   isAddNewList: boolean;
@@ -36,7 +37,7 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
         ref={divRef}
         initial={false}
         variants={variants}
-        className="w-full fixed bottom-0 bg-white rounded-t-2xl h-3/4 p-4 flex flex-col"
+        className="w-full fixed bottom-0 bg-white rounded-t-2xl p-4 flex flex-col pb-32"
         animate={isAddNewList ? "open" : "closed"}
       >
         <button
@@ -46,17 +47,16 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
           <FaTimes />
           <h2>ปิด</h2>
         </button>
-        <div className="flex flex-col gap-4 justify-between pt-4">
+        <div className="flex flex-col gap-6 justify-between pt-4">
           <div className="flex gap-6">
             <InputForm placeholder="ชื่อรายการ" className="w-full" />
             <MoneyForm placeholder="ราคา" />
           </div>
-          <div className="flex flex-wrap gap-2 w-full">
-            <CategoryList category="shopping">ช้อปปิ้ง</CategoryList>
-            <CategoryList category="food">อาหาร</CategoryList>
-            <CategoryList category="travel">การเดินทาง</CategoryList>
-            <CategoryList category="entertainment">ความบันเทิง</CategoryList>
-          </div>
+          <TimeForm />
+          <Description />
+
+          <Category />
+
           <button className="px-4 py-3 w-full bg-gray-900 hover:bg-gray-800 rounded-full text-white">
             เพิ่มรายการ
           </button>
