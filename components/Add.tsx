@@ -7,7 +7,7 @@ interface AddProps {
 function Add({ onClick }: AddProps) {
   return (
     <button
-      className="p-2 rounded-full cursor-pointer bg-green-500  inline-flex justify-between"
+      className="p-2 rounded-full cursor-pointer bg-lime-400  inline-flex justify-between"
       onClick={onClick}
     >
       <BsPlus size="1.5rem" color="white" />
