@@ -5,8 +5,10 @@ import { Category } from "types/Category";
 function index() {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const handleOnClick = (category: Category) => {
+    if (selectedCategory === category) return setSelectedCategory("");
     setSelectedCategory(category);
   };
+
   return (
     <div className="flex flex-wrap gap-2 w-full">
       <CategoryList

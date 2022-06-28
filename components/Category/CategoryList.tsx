@@ -44,6 +44,11 @@ function CategoryList({
           )}
         </button>
         <h4 className="font-normal text-sm">{children}</h4>
+        {isSelected && (
+          <button>
+            <FaTimes size="0.75rem" />
+          </button>
+        )}
       </div>
     </>
   );
