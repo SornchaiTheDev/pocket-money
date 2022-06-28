@@ -1,16 +1,16 @@
 import { NextPage } from "next";
 import BottomNav from "@components/BottomNav";
 import { useSession, signOut } from "next-auth/react";
-import TodayUsed from "@components/TodayUsed";
-import Image from "next/image";
 import UsedList from "@components/UsedList";
 import Add from "@components/Add";
 import AddPopup from "@components/AddPopup";
 import Header from "@components/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 const Index: NextPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <div className="relative">
       <title>My Pocket</title>

@@ -7,6 +7,7 @@ import MoneyForm from "./form/MoneyForm";
 import Category from "@components/Category";
 import TimeForm from "./form/TimeForm";
 import Description from "./form/Description";
+import { toast } from "react-toastify";
 
 interface AddPopupProps {
   isAddNewList: boolean;
@@ -57,7 +58,10 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
 
           <Category />
 
-          <button className="px-4 py-3 w-full bg-gray-900 hover:bg-gray-800 rounded-full text-white">
+          <button
+            className="px-4 py-3 w-full bg-gray-900 hover:bg-gray-800 rounded-full text-white"
+            onClick={() => toast.success("เพิ่มรายการสำเร็จ")}
+          >
             เพิ่มรายการ
           </button>
         </div>
