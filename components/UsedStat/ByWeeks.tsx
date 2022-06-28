@@ -27,7 +27,7 @@ const data: ChartData = {
   datasets: [
     {
       label: "ใช้เงินไป",
-      data: labels.map(() => Math.random() * 250),
+      data: labels.map(() => Math.ceil(Math.random() * 250)),
       fill: "start",
       borderColor: "#f43f5e",
       backgroundColor: "#fecdd3",
@@ -52,11 +52,7 @@ const options: ChartOptions = {
   },
   plugins: {
     tooltip: {
-      callbacks: {
-        label: (ctx) => {
-          return `ใช้เงินไป : ${ctx.parsed.y.toFixed(2)} บาท`;
-        },
-      },
+      enabled: false,
     },
   },
 };

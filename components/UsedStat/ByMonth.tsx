@@ -44,11 +44,7 @@ const options: ChartOptions = {
   },
   plugins: {
     tooltip: {
-      callbacks: {
-        label: (ctx) => {
-          return `ใช้เงินไป : ${ctx.parsed.y.toFixed(2)} บาท`;
-        },
-      },
+      enabled: false,
     },
   },
 };

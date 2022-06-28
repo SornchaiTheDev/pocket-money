@@ -38,6 +38,14 @@ const data: ChartData = {
   ],
 };
 
+const options: ChartOptions = {
+  plugins: {
+    tooltip: {
+      enabled: false,
+    },
+  },
+};
+
 function Byday() {
   return (
     <>
@@ -52,7 +60,7 @@ function Byday() {
           </div>
         </motion.div>
         <div className="w-3/12">
-          <Doughnut data={data} />
+          <Doughnut data={data} options={options} />
         </div>
       </div>
     </>
