@@ -1,6 +1,7 @@
 import ViewAs from "@components/ViewAs";
 import Byday from "./Byday";
 import ByWeeks from "./ByWeeks";
+import ByMonth from "./ByMonth";
 import { useState } from "react";
 import { ViewAs as ViewAsType } from "types/ViewAs";
 
@@ -16,6 +17,7 @@ function TodayUsed() {
         <div className="bg-white p-4 rounded-lg w-11/12 shadow-md relative">
           {selected === "day" && <Byday />}
           {selected === "week" && <ByWeeks />}
+          {selected === "month" && <ByMonth />}
         </div>
       </div>
     </>
