@@ -25,7 +25,6 @@ function Header() {
           />
         </div>
       </div>
-      <ViewAs />
       <TodayUsed />
     </div>
   );

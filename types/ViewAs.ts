@@ -1,0 +1,1 @@
+export type ViewAs = "day" | "week" | "month";
