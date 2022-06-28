@@ -8,6 +8,7 @@ interface MoneyFormProps {
 function MoneyForm({ placeholder }: MoneyFormProps) {
   const [value, setValue] = useState<string>("");
   const handleOnChange = (e: FormEvent<HTMLInputElement>) => {
+    if (/[a-zA-Z]/.test(e.currentTarget.value)) return;
     const valueAsNumber = Number(e.currentTarget.value.replaceAll(",", ""));
     const assignValue = toCurrency(valueAsNumber);
     setValue(assignValue);
@@ -18,14 +19,14 @@ function MoneyForm({ placeholder }: MoneyFormProps) {
         <input
           type="text"
           style={{ border: "1.5px solid #2e2e2e" }}
-          className="border-2 rounded-lg p-2 pb-2 pt-4 text-lg w-full"
+          className="border-2 rounded-lg p-2 pb-2 pt-4  text-md w-full"
           value={value}
           inputMode="numeric"
           onChange={handleOnChange}
         />
       </div>
 
-      <p className="absolute -top-3 left-2 bg-white px-2 font-normal">
+      <p className="absolute -top-3 left-2 bg-white px-2 font-normal text-sm">
         {placeholder}
       </p>
     </div>

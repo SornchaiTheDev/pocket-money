@@ -13,18 +13,21 @@ function Description({ placeholder }: DescriptionProps) {
   };
   return (
     <div className="relative w-full">
-      <div className="relative">
+      <div
+        className="relative pt-2 border-2 rounded-lg px-2 text-lg w-full"
+        style={{ border: "1.5px solid #2e2e2e" }}
+      >
         <textarea
-          style={{ border: "1.5px solid #2e2e2e" }}
-          className="border-2 rounded-lg p-2 pb-2 pt-4 text-lg w-full"
           maxLength={200}
+          rows={3}
           value={value}
           onChange={handleOnChange}
+          className="w-full outline-none max-h-48 resize-none text-md"
         />
-        <p className="text-sm text-right">{value.length}/200</p>
       </div>
+      <p className="text-sm text-right">{value.length}/200</p>
 
-      <p className="absolute -top-3 left-2 bg-white px-2 font-normal">
+      <p className="absolute -top-3 left-2 bg-white px-2 font-normal text-sm">
         คำอธิบายเพิ่มเติม (ไม่จำเป็นต้องกรอก)
       </p>
     </div>

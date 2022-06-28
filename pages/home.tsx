@@ -14,7 +14,7 @@ const Index: NextPage = () => {
     <div className="relative">
       <title>My Pocket</title>
 
-      <div className="bg-gray-50 min-h-screen pb-28">
+      <div className="bg-gray-50 min-h-screen pb-4">
         <Header />
         <div className="mt-16 px-4 flex flex-col gap-3">
           <div className="flex justify-between items-center">
