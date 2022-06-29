@@ -2,6 +2,7 @@ import React from "react";
 import Page from "layout/Page";
 import Image from "next/image";
 import BacktoHome from "@components/BacktoHome";
+import ThemeSwitich from "@components/ThemeSwitich";
 function Profile() {
   return (
     <Page>
@@ -16,7 +17,13 @@ function Profile() {
             />
           </div>
         </div>
-        <BacktoHome className="px-4" />
+        <div className="flex justify-between items-center px-4">
+          <BacktoHome />
+          <ThemeSwitich />
+        </div>
+      </div>
+      <div className="mt-20 flex justify-center">
+        <h2 className="text-lg font-semibold">Sornchai Somsakul</h2>
       </div>
     </Page>
   );

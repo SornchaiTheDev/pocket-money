@@ -10,7 +10,7 @@ function Header() {
   };
 
   return (
-    <div className="w-full px-4 md:px-10 py-10 pb-24 relative bg-gradient-to-r from-[rgba(92,226,80,1)] to-[rgba(52,218,37,1)] dark:from-gray-900 bg-white dark:bg-black">
+    <div className="w-full px-4 md:px-10 py-10 pb-24 relative bg-lime-500 dark:from-gray-900 dark:bg-black">
       <div className="flex w-full justify-between items-center">
         <div>
           <h2 className="text-lg text-white">สวัสดี !</h2>
