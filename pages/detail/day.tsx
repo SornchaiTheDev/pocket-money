@@ -3,7 +3,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import Link from "next/link";
 import { ChartData, ChartOptions } from "chart.js";
 import Page from "layout/Page";
-import BacktoHome from "@components/BacktoHome";
+import BacktoHome from "@components/Backto";
 const data: ChartData = {
   labels: ["ชอปปิ้ง", "อาหาร", "การเดินทาง", "ความบันเทิง", "อื่นๆ"],
   datasets: [
@@ -42,7 +42,7 @@ const options: ChartOptions = {
 function Day() {
   return (
     <Page className="px-4">
-      <BacktoHome />
+      <BacktoHome href="/home" title="กลับหน้าหลัก" />
       <div className="bg-white w-full rounded-lg flex flex-col items-center justify-center p-4">
         <div className="w-1/2">
           <Doughnut data={data} options={options} />

@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "layout/Page";
 import Image from "next/image";
-import BacktoHome from "@components/BacktoHome";
+import BacktoHome from "@components/Backto";
 import SettingButton from "@components/SettingButton";
 function Profile() {
   return (
@@ -18,7 +18,7 @@ function Profile() {
           </div>
         </div>
         <div className="flex justify-between items-center px-4">
-          <BacktoHome />
+          <BacktoHome title="กลับหน้าหลัก" />
           <SettingButton />
         </div>
       </div>
