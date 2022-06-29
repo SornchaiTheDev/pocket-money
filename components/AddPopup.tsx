@@ -50,7 +50,7 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
   return (
     <>
       <div
-        className={`w-full h-full absolute top-0 flex flex-col justify-end ${
+        className={`w-full h-full absolute top-0 flex flex-col justify-end bg-black bg-opacity-40 ${
           isAddNewList ? "block" : "hidden"
         }`}
         onClick={onClose}
@@ -73,10 +73,10 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
             <InputForm
               value={form.name}
               onChange={handleOnChangeTitle}
-              placeholder="ชื่อรายการ"
+              title="ชื่อรายการ"
               className="w-full"
             />
-            <MoneyForm placeholder="ราคา" />
+            <MoneyForm title="ราคา" />
           </div>
           <TimeForm isAddnewList={isAddNewList} />
           <Description />

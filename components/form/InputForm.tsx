@@ -1,14 +1,20 @@
 import { FormEvent } from "react";
 
 interface InputFormProps {
-  placeholder: string;
+  title: string;
+  placeholder?: string;
+  size?: string;
+  type?: string;
   className?: string;
-  value: string;
-  onChange: (e: FormEvent<HTMLInputElement>) => void;
+  value?: string;
+  onChange?: (e: FormEvent<HTMLInputElement>) => void;
 }
 
 function InputForm({
+  title,
+  size,
   placeholder,
+  type,
   className,
   value,
   onChange,
@@ -16,14 +22,17 @@ function InputForm({
   return (
     <div className={`relative ${className}`}>
       <input
+        placeholder={placeholder}
         value={value}
         onChange={onChange}
-        type="text"
-        className="w-full rounded-lg p-2 pb-2 pt-4 text-lg"
+        type={type !== undefined ? type : "text"}
+        className={`w-full rounded-lg p-2 pb-2 pt-4 ${
+          size !== undefined ? size : "text-lg"
+        }`}
         style={{ border: "1.5px solid #2e2e2e" }}
       />
       <p className="absolute -top-3 left-2 bg-white px-2 font-normal text-sm">
-        {placeholder}
+        {title}
       </p>
     </div>
   );

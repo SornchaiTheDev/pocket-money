@@ -2,12 +2,12 @@ import { useState, FormEvent } from "react";
 import { toCurrency } from "@utils/toCurrency";
 
 interface MoneyFormProps {
-  placeholder: string;
-  value : number;
+  title: string;
+  value: number;
   onChange: (e: FormEvent<HTMLInputElement>) => void;
 }
 
-function MoneyForm({ placeholder }: MoneyFormProps) {
+function MoneyForm({ title }: MoneyFormProps) {
   const [value, setValue] = useState<string>("");
   const handleOnChange = (e: FormEvent<HTMLInputElement>) => {
     if (/[a-zA-Z]/.test(e.currentTarget.value)) return;
@@ -29,7 +29,7 @@ function MoneyForm({ placeholder }: MoneyFormProps) {
       </div>
 
       <p className="absolute -top-3 left-2 bg-white px-2 font-normal text-sm">
-        {placeholder}
+        {title}
       </p>
     </div>
   );

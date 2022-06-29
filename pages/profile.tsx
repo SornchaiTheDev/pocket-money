@@ -2,7 +2,7 @@ import React from "react";
 import Page from "layout/Page";
 import Image from "next/image";
 import BacktoHome from "@components/BacktoHome";
-import ThemeSwitich from "@components/ThemeSwitich";
+import SettingButton from "@components/SettingButton";
 function Profile() {
   return (
     <Page>
@@ -19,11 +19,14 @@ function Profile() {
         </div>
         <div className="flex justify-between items-center px-4">
           <BacktoHome />
-          <ThemeSwitich />
+          <SettingButton />
         </div>
       </div>
-      <div className="mt-20 flex justify-center">
-        <h2 className="text-lg font-semibold">Sornchai Somsakul</h2>
+      <div className="mt-20 flex flex-col justify-center items-center gap-4">
+        <h2 className="text-lg font-semibold">_cho_kun_</h2>
+        <button className="px-6 py-2 border-2 rounded-full w-fit">
+          แก้ไขโปรไฟล์
+        </button>
       </div>
     </Page>
   );
