@@ -10,7 +10,7 @@ function ViewAs({ onClick, selected }: ViewAsProps) {
       <button
         className={`px-4 py-1 border-2 ${
           selected === "day" && "bg-white text-black"
-        }  rounded-full text-white hover:bg-white focus:bg-white hover:text-black focus:text-black`}
+        }  rounded-full text-white hover:bg-white focus:bg-white hover:text-black focus:text-black border-white`}
         onClick={() => onClick("day")}
       >
         วันนี้
@@ -18,7 +18,7 @@ function ViewAs({ onClick, selected }: ViewAsProps) {
       <button
         className={`px-4 py-1 border-2 ${
           selected === "week" && "bg-white text-black"
-        }  rounded-full text-white hover:bg-white focus:bg-white hover:text-black focus:text-black`}
+        }  rounded-full text-white hover:bg-white focus:bg-white hover:text-black focus:text-black border-white`}
         onClick={() => onClick("week")}
       >
         สัปดาห์นี้
@@ -26,7 +26,7 @@ function ViewAs({ onClick, selected }: ViewAsProps) {
       <button
         className={`px-4 py-1 border-2 ${
           selected === "month" && "bg-white text-black"
-        }  rounded-full text-white hover:bg-white focus:bg-white hover:text-black focus:text-black`}
+        }  rounded-full text-white hover:bg-white focus:bg-white hover:text-black focus:text-black border-white`}
         onClick={() => onClick("month")}
       >
         เดือนนี้

@@ -13,12 +13,11 @@ const Index: NextPage = () => {
   return (
     <div className="relative">
       <title>My Pocket</title>
-
-      <div className="bg-gray-50 min-h-screen pb-4">
+      <div className="bg-gray-50 dark:bg-gray-900 min-h-screen pb-4">
         <Header />
         <div className="mt-16 px-4 flex flex-col gap-3">
           <div className="flex justify-between items-center">
-            <h2 className="text-lg my-4">รายการวันนี้ (2)</h2>
+            <h2 className="text-lg my-4 dark:text-white">รายการวันนี้ (2)</h2>
             <Add onClick={() => setIsOpen(!isOpen)} />
           </div>
           <UsedList />

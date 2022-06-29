@@ -1,20 +1,26 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import { toCurrency } from "@utils/toCurrency";
 
 interface TimeFormProps {
   placeholder?: string;
+  isAddnewList: boolean;
 }
 
-function TimeForm({ placeholder }: TimeFormProps) {
-  const now = new Date();
-  const inTimeFormat =
-    now.getHours().toString().padStart(2, "0") +
-    ":" +
-    now.getMinutes().toString().padStart(2, "0");
-  const [value, setValue] = useState<string>(inTimeFormat);
+function TimeForm({ placeholder, isAddnewList }: TimeFormProps) {
+  const [value, setValue] = useState<string>("");
   const handleOnChange = (e: FormEvent<HTMLInputElement>) => {
     setValue(e.currentTarget.value);
   };
+
+  useEffect(() => {
+    const now = new Date();
+    const inTimeFormat =
+      now.getHours().toString().padStart(2, "0") +
+      ":" +
+      now.getMinutes().toString().padStart(2, "0");
+    setValue(inTimeFormat);
+  }, [isAddnewList]);
+
   return (
     <div className="relative w-full">
       <div className="relative">

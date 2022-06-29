@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineShopping } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
@@ -46,6 +46,7 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
   const handleOnChangeTitle = (e: FormEvent<HTMLInputElement>) => {
     setForm({ ...form, name: e.currentTarget.value });
   };
+
   return (
     <>
       <div
@@ -77,7 +78,7 @@ function AddPopup({ isAddNewList, onClose }: AddPopupProps) {
             />
             <MoneyForm placeholder="ราคา" />
           </div>
-          <TimeForm />
+          <TimeForm isAddnewList={isAddNewList} />
           <Description />
 
           <Category />

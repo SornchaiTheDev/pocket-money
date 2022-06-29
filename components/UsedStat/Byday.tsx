@@ -53,7 +53,7 @@ function Byday() {
         <motion.div animate={{ opacity: [0, 1] }}>
           <div className="flex flex-col">
             <h2 className="text-gray-400">วันนี้นี้ใช้ไป</h2>
-            <div className="inline-flex items-end gap-2 mt-2">
+            <div className="inline-flex items-end gap-2 mt-2 dark:text-white">
               <h1 className="text-4xl">1,250</h1>
               <h1 className="text-md">บาท</h1>
             </div>

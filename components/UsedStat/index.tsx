@@ -14,7 +14,7 @@ function TodayUsed() {
     <>
       <ViewAs selected={selected} onClick={handleOnSelect} />
       <div className="absolute -bottom-10 left-0 w-full flex justify-center h-32">
-        <div className="bg-white p-4 rounded-lg w-11/12 shadow-md relative">
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-lg w-11/12 shadow-md relative">
           {selected === "day" && <Byday />}
           {selected === "week" && <ByWeeks />}
           {selected === "month" && <ByMonth />}
