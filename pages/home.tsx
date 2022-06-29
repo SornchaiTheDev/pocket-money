@@ -5,7 +5,8 @@ import UsedList from "@components/UsedList";
 import Add from "@components/Add";
 import AddPopup from "@components/AddPopup";
 import Header from "@components/Header";
-import { useState, useEffect } from "react";
+import Page from "layout/Page";
+import { useState } from "react";
 
 const Index: NextPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -13,7 +14,7 @@ const Index: NextPage = () => {
   return (
     <div className="relative">
       <title>My Pocket</title>
-      <div className="bg-gray-50 dark:bg-gray-900 min-h-screen pb-4">
+      <Page className="bg-gray-50 dark:bg-gray-900 min-h-screen pb-4">
         <Header />
         <div className="mt-16 px-4 flex flex-col gap-3">
           <div className="flex justify-between items-center">
@@ -30,7 +31,7 @@ const Index: NextPage = () => {
           <UsedList />
           <UsedList />
         </div>
-      </div>
+      </Page>
 
       <AddPopup isAddNewList={isOpen} onClose={() => setIsOpen(false)} />
     </div>

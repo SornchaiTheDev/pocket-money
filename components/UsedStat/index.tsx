@@ -5,6 +5,7 @@ import ByMonth from "./ByMonth";
 import { useState } from "react";
 import { ViewAs as ViewAsType } from "types/ViewAs";
 
+
 function TodayUsed() {
   const [selected, setSelected] = useState<ViewAsType>("day");
   const handleOnSelect = (view: ViewAsType) => {

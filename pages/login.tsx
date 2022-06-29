@@ -1,4 +1,3 @@
-import Card from "@components/Card";
 import LoginCard from "@components/LoginCard";
 import { FaDiscord, FaApple, FaGoogle, FaLine } from "react-icons/fa";
 import { NextPage } from "next";
@@ -10,7 +9,7 @@ const Login: NextPage = () => {
       <title>My Pocket - Login</title>
 
       <div className="p-4 bg-gray-50 h-screen flex justify-center items-center">
-        <Card className="flex flex-col max-w-sm px-4 pt-10 pb-4  rounded-2xl">
+        <div className="flex flex-col max-w-sm px-4 pt-10 pb-4  rounded-2xl">
           <h2 className="text-lg font-normal mb-4">เข้าสู่ระบบ</h2>
           <div className="flex flex-col gap-2 w-full">
             <LoginCard>
@@ -38,7 +37,7 @@ const Login: NextPage = () => {
               </a>
             </Link>
           </h2>
-        </Card>
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,3 @@
-import Card from "@components/Card";
 import LoginCard from "@components/LoginCard";
 import { FaDiscord, FaApple, FaGoogle, FaLine } from "react-icons/fa";
 import { NextPage } from "next";
@@ -11,7 +10,7 @@ const Index: NextPage = () => {
       <title>My Pocket - Register</title>
 
       <div className="p-4 bg-gray-50 h-screen flex justify-center items-center">
-        <Card className="flex flex-col max-w-sm px-4 pt-10 pb-4  rounded-2xl">
+        <div className="flex flex-col max-w-sm px-4 pt-10 pb-4  rounded-2xl">
           <div className="w-full">
             <h1 className="text-xl font-semibold">My Pocket</h1>
             <p>จัดการรายรับ-รายจ่ายของคุณแบบง่ายๆ</p>
@@ -43,7 +42,7 @@ const Index: NextPage = () => {
               </a>
             </Link>
           </h2>
-        </Card>
+        </div>
       </div>
     </>
   );

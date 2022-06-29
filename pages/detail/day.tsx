@@ -1,17 +1,9 @@
 import { Doughnut } from "react-chartjs-2";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-  ChartData,
-  ChartOptions,
-} from "chart.js";
-
-ChartJS.register(ArcElement, Tooltip);
-
+import { BsArrowLeft } from "react-icons/bs";
+import Link from "next/link";
+import { ChartData, ChartOptions } from "chart.js";
+import Page from "layout/Page";
+import BacktoHome from "@components/BacktoHome";
 const data: ChartData = {
   labels: ["ชอปปิ้ง", "อาหาร", "การเดินทาง", "ความบันเทิง", "อื่นๆ"],
   datasets: [
@@ -47,29 +39,19 @@ const options: ChartOptions = {
   },
 };
 
-function Byday() {
-  const router = useRouter();
+function Day() {
   return (
-    <>
-      <div
-        className="flex justify-between items-center h-full cursor-pointer"
-        onClick={() => router.push("/detail/day")}
-      >
-        <motion.div animate={{ opacity: [0, 1] }}>
-          <div className="flex flex-col">
-            <h2 className="text-gray-400">วันนี้นี้ใช้ไป</h2>
-            <div className="inline-flex items-end gap-2 mt-2 dark:text-white">
-              <h1 className="text-4xl">1,250</h1>
-              <h1 className="text-md">บาท</h1>
-            </div>
-          </div>
-        </motion.div>
-        <div className="w-3/12 pointer-events-none">
+    <Page className="px-4">
+      <BacktoHome />
+      <div className="bg-white w-full rounded-lg flex flex-col items-center justify-center p-4">
+        <div className="w-1/2">
           <Doughnut data={data} options={options} />
         </div>
+        <h2>ประเภทการใช้งาน</h2>
       </div>
-    </>
+      
+    </Page>
   );
 }
 
-export default Byday;
+export default Day;
