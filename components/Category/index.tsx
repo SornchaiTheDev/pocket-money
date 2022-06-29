@@ -3,9 +3,8 @@ import CategoryList from "@components/Category/CategoryList";
 import { Category } from "types/Category";
 
 function index() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("shopping");
   const handleOnClick = (category: Category) => {
-    if (selectedCategory === category) return setSelectedCategory("");
     setSelectedCategory(category);
   };
 

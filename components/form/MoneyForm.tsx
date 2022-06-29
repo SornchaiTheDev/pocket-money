@@ -3,6 +3,8 @@ import { toCurrency } from "@utils/toCurrency";
 
 interface MoneyFormProps {
   placeholder: string;
+  value : number;
+  onChange: (e: FormEvent<HTMLInputElement>) => void;
 }
 
 function MoneyForm({ placeholder }: MoneyFormProps) {

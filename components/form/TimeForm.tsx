@@ -21,7 +21,7 @@ function TimeForm({ placeholder }: TimeFormProps) {
         <input
           type="time"
           style={{ border: "1.5px solid #2e2e2e" }}
-          className="border-2 rounded-lg p-2 pb-2 w-full text-md"
+          className="border-2 rounded-lg md:p-2 px-2 w-full text-md appearance-none py-4"
           value={value}
           onChange={handleOnChange}
         />
