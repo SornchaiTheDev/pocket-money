@@ -3,4 +3,5 @@ export type Category =
   | "food"
   | "travel"
   | "entertainment"
-  | "other";
+  | "other"
+  | "income";

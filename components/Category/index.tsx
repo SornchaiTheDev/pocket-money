@@ -3,13 +3,20 @@ import CategoryList from "@components/Category/CategoryList";
 import { Category } from "types/Category";
 
 function index() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("shopping");
+  const [selectedCategory, setSelectedCategory] = useState<string>("income");
   const handleOnClick = (category: Category) => {
     setSelectedCategory(category);
   };
 
   return (
     <div className="flex flex-wrap gap-2 w-full">
+      <CategoryList
+        category="income"
+        isSelected={selectedCategory === "income"}
+        onClick={() => handleOnClick("income")}
+      >
+        รายรับ
+      </CategoryList>
       <CategoryList
         category="shopping"
         isSelected={selectedCategory === "shopping"}
