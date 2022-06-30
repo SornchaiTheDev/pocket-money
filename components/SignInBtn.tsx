@@ -8,9 +8,7 @@ function SignInBtn({ onClick, isSubmit }: SignInBtnProps) {
   return (
     <button
       disabled={isSubmit}
-      className={`bg-gray-900 rounded-full px-4 py-3 text-white transition-all duration-300 ${
-        !isSubmit && "hover:bg-lime-500"
-      } inline-flex justify-center items-center`}
+      className="bg-gray-900 rounded-full px-4 py-3 text-white transition-all duration-300 inline-flex justify-center items-center"
       onClick={onClick}
     >
       {isSubmit ? (

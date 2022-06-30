@@ -7,18 +7,21 @@ import { signIn, signOut } from "next-auth/react";
 import InputForm from "@components/form/InputForm";
 import { toast } from "react-toastify";
 import SignInBtn from "@components/SignInBtn";
+import { useRouter } from "next/router";
 
 const Index: NextPage = () => {
   const [isSubmit, setIsSubmit] = useState<boolean>(false);
+  const router = useRouter();
   const handleOnSubmitNontri = () => {
     setIsSubmit(true);
     setTimeout(() => {
+      router.push("/budget-limit");
       setIsSubmit(false);
     }, 1000);
   };
   return (
     <>
-      <title>My Pocket - Register</title>
+      <title>KU Saving</title>
 
       <div className="p-4 bg-gray-50 h-screen flex justify-center items-center">
         <div className="flex flex-col max-w-sm p-4  rounded-2xl bg-white shadow-sm py-6">

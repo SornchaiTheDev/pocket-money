@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import { Category } from "types/Category";
-
+import Icons from "@components/Category/Icons";
 interface CategoryListProps {
   children: ReactNode;
   category: Category;
@@ -31,17 +31,7 @@ function CategoryList({
         style={{ border: `2px solid ${isSelected ? "#a3e635" : "#2e2e2e"}` }}
       >
         <button className="rounded-full p-2">
-          {category === "shopping" ? (
-            <AiOutlineShopping size="1.15rem" />
-          ) : category === "food" ? (
-            <FaHamburger size="1.15rem" />
-          ) : category === "entertainment" ? (
-            <FaTheaterMasks size="1.15rem" />
-          ) : category === "travel" ? (
-            <FaUmbrellaBeach size="1.15rem" />
-          ) : (
-            category === "other" && <BsThreeDots size="1.15rem" />
-          )}
+          <Icons category={category} />
         </button>
         <h4 className="font-normal text-sm">{children}</h4>
       </div>

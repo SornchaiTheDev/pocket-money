@@ -16,7 +16,7 @@ function MoneyForm({ title }: MoneyFormProps) {
     setValue(assignValue);
   };
   return (
-    <div className="relative w-fit">
+    <div className="relative w-full">
       <div className="relative">
         <input
           type="text"
